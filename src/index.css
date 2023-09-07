@@ -2,12 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   font-family: "Manrope", sans-serif;
 }
 
 body{
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .common-width {

@@ -1,5 +1,6 @@
 [
     {
+        "id":"abc123xyz456pqr789longid1",
         "jobTitle": "Software Engineer",
         "companyName": "Google",
         "companyLogoImgUrl": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
@@ -24,6 +25,7 @@
         }
     },
     {
+        "id":"def321ghi654mno987longid2",
         "jobTitle": "Data Scientist",
         "companyName": "Microsoft",
         "companyLogoImgUrl": "https://www.microsoft.com/en-us/sites/default/files/styles/hero/public/brand_assets/microsoft-logo-color.svg",
@@ -48,6 +50,7 @@
         }
     },
     {
+        "id":"uvw543rst210lmn876longid3",
         "jobTitle": "Cybersecurity Engineer",
         "companyName": "Amazon Web Services",
         "companyLogoImgUrl": "https://aws.amazon.com/content/dam/aws/marketing/aws-brand/images/aws_logo_color_black_300x85.svg",
@@ -72,6 +75,7 @@
         }
     },
     {
+        "id":"qwe432abc123xyz456longid4",
         "jobTitle": "Data Scientist",
         "companyName": "Netflix",
         "companyLogoImgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Netflix_logo.svg/1200px-Netflix_logo.svg.png",
@@ -96,6 +100,7 @@
         }
     },
     {
+        "id":"pqr789mno987ghi654longid5",
         "jobTitle": "Full-Stack Developer",
         "companyName": "Tesla",
         "companyLogoImgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Tesla_logo.svg/1200px-Tesla_logo.svg.png",
@@ -120,6 +125,7 @@
         }
     },
     {
+        "id":"longid6abc123uvw543rst210",
         "jobTitle": "Product Manager",
         "companyName": "Meta",
         "companyLogoImgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Meta_logo.svg/1200px-Meta_logo.svg.png",
@@ -144,6 +150,7 @@
         }
     },
     {
+        "id":"lmn876qwe432def321ghi654",
         "jobTitle": "Machine Learning Engineer",
         "companyName": "Google AI",
         "companyLogoImgUrl": "https://ai.googleblog.com/static/images/ai_logo_color.png",
@@ -168,6 +175,7 @@
         }
     },
     {
+        "id":"xyz456longid7pqr789abc123",
         "jobTitle": "UI/UX Designer",
         "companyName": "Apple",
         "companyLogoImgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Apple_logo_black.svg/1200px-Apple_logo_black.svg.png",
@@ -192,6 +200,7 @@
         }
     },
     {
+        "id":"mno987uvw543qwe432def321",
         "jobTitle": "Software Architect",
         "companyName": "Microsoft",
         "companyLogoImgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Microsoft-logo.svg/1200px-Microsoft-logo.svg.png",

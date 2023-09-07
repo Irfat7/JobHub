@@ -6,6 +6,7 @@ export default {
       colors: {
         "gradient-start": "#7E90FE",
         "gradient-end": "#9873FF",
+        'custom-dark-gray': '#a3a3a3',
       },
     },
   },

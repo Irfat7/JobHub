@@ -26,7 +26,7 @@ const Navbar = () => {
             </button>
 
             <div
-                className={`px-2 py-1 absolute top-full right-0 duration-500 shadow-md ${nav ? 'translate-x-0' : 'translate-x-full'}
+                className={`px-2 py-1 absolute top-full right-0 bg-white duration-500 shadow-md ${nav ? 'translate-x-0' : 'translate-x-full'}
                 md:static md:translate-x-0 md:px-0 md:py-0 md:shadow-none md:flex gap-12`}
             >
                 <ActiveLink to='/'>Home</ActiveLink>
