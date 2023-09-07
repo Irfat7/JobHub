@@ -6,6 +6,10 @@
   font-family: "Manrope", sans-serif;
 }
 
+body{
+  overflow: hidden;
+}
+
 .common-width {
   max-width: 1280px;
   margin-left: auto;

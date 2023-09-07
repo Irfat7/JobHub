@@ -9,24 +9,24 @@ const Navbar = () => {
 
     return (
         <nav
-            className='flex justify-between p-2 relative items-center
+            className='flex justify-between items-center p-2 relative
             '
         >
             <Link 
             to='/' 
-            className='font-semibold text-lg
-            md:font-bold md:text-xl'
+            className='font-extrabold text-3xl
+            md:font-bold'
             >JobHub</Link>
 
             <button
                 onClick={() => setNav(!nav)}
                 className='
                 md:hidden'
-            >{nav ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars} />}
+            >{nav ? <FontAwesomeIcon icon={faXmark} size='xl' /> : <FontAwesomeIcon icon={faBars} size='xl'/>}
             </button>
 
             <div
-                className={`px-2 py-1 absolute top-full right-0 duration-500 shadow-md ${nav ? 'translate-x-0' : 'translate-x-full'} 
+                className={`px-2 py-1 absolute top-full right-0 duration-500 shadow-md ${nav ? 'translate-x-0' : 'translate-x-full'}
                 md:static md:translate-x-0 md:px-0 md:py-0 md:shadow-none md:flex gap-12`}
             >
                 <ActiveLink to='/'>Home</ActiveLink>
