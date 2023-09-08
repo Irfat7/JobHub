@@ -12,11 +12,11 @@ const JobDetails = () => {
     return (
         <div>
             <p
-                className='font-bold text-3xl text-center my-16
+                className='font-bold text-3xl text-center my-16 
                        md:my-28'
             >Job Details</p>
 
-            <div className='grid grid-cols-1 text-justify
+            <div className='grid grid-cols-1 text-justify gap-12
                             md:grid-cols-2 md:gap-6'>
                 <div>
                     <p className='leading-7 mb-5'>
@@ -42,7 +42,7 @@ const JobDetails = () => {
                 </div>
                 <div className=''>
                     <div
-                        className='bg-indigo-100 rounded-md md:p-7 md:mb-6'
+                        className='bg-indigo-100 rounded-md p-7 mb-6 md:p-7 md:mb-6'
                     >
                         <p className='pb-6 mb-6 font-bold border-gray-300 border-b-2'>Job Details</p>
                         <p className='font-semibold mb-4'>Salary : <span className='text-gray-600 font-normal'>{salaryRange} (Per Month)</span></p>

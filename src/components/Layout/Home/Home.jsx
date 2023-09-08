@@ -10,7 +10,7 @@ const Home = () => {
             <JobCategory />
             <FeaturedJobs />
         </div>
-    );
+    ); 
 };
 
 export default Home;

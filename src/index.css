@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -11,8 +11,19 @@
   font-family: "Manrope", sans-serif;
 }
 
-body{
+body {
   overflow-x: hidden;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: clamp(100px, 20vw, 270px);
+  background: url("./assets/background-svg.svg");
+  background-size: cover;
+  z-index: -1;
 }
 
 .common-width {

@@ -27,7 +27,7 @@ const Navbar = () => {
 
             <div
                 className={`px-2 py-5 text-lg font-medium absolute top-full right-0 bg-white duration-500 shadow-md -z-50 ${nav ? 'translate-y-0' : '-translate-y-96'}
-                            md:static md:duration-0 md:translate-y-0 md:px-0 md:py-0 md:shadow-none md:flex gap-12`}
+                            md:static md:bg-transparent md:duration-0 md:translate-y-0 md:px-0 md:py-0 md:shadow-none md:flex gap-12`}
             >
                 <ActiveLink to='/'>Home</ActiveLink>
                 <ActiveLink to='/statistic'>Statistics</ActiveLink>
