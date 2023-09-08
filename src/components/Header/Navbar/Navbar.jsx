@@ -9,25 +9,25 @@ const Navbar = () => {
 
     return (
         <nav
-            className='flex justify-between items-center p-2 relative
+            className='flex justify-between items-center p-2 relative z-50
             '
         >
-            <Link 
-            to='/' 
-            className='font-extrabold text-3xl
-            md:font-bold'
+            <Link
+                to='/'
+                className='font-extrabold text-3xl
+                           md:font-bold'
             >JobHub</Link>
 
             <button
                 onClick={() => setNav(!nav)}
-                className='
+                className='bg-white
                 md:hidden'
-            >{nav ? <FontAwesomeIcon icon={faXmark} size='xl' /> : <FontAwesomeIcon icon={faBars} size='xl'/>}
+            >{nav ? <FontAwesomeIcon icon={faXmark} size='xl' /> : <FontAwesomeIcon icon={faBars} size='xl' />}
             </button>
 
             <div
-                className={`px-2 py-1 absolute top-full right-0 bg-white duration-500 shadow-md ${nav ? 'translate-x-0' : 'translate-x-full'}
-                md:static md:translate-x-0 md:px-0 md:py-0 md:shadow-none md:flex gap-12`}
+                className={`px-2 py-5 text-lg font-medium absolute top-full right-0 bg-white duration-500 shadow-md -z-50 ${nav ? 'translate-y-0' : '-translate-y-96'}
+                            md:static md:duration-0 md:translate-y-0 md:px-0 md:py-0 md:shadow-none md:flex gap-12`}
             >
                 <ActiveLink to='/'>Home</ActiveLink>
                 <ActiveLink to='/statistic'>Statistics</ActiveLink>

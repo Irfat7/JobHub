@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import JobCard from './JobCard/JobCard';
+import { AllJobsContext } from '../Header/Header';
 
 const FeaturedJobs = () => {
-    const allJobs = useLoaderData()
+    const allJobs = useContext(AllJobsContext)
     const [jobsToShow, setJobsToShow] = useState(allJobs.slice(0, 4))
 
     return (
@@ -11,7 +12,7 @@ const FeaturedJobs = () => {
                         md:mt-32'>
             <p
                 className='mb-4 text-3xl font-bold
-                           md:text-5xl md:mb-8'
+                           md:mb-8'
             >Featured Jobs</p>
             <p
                 className='mb-5 text-gray-600 text-sm leading-normal
@@ -28,7 +29,7 @@ const FeaturedJobs = () => {
             {
                 jobsToShow.length === 4 && <button
                     onClick={() => setJobsToShow(allJobs)}
-                    className='mt-5 px-4 py-2 rounded-md font-bold text-white bg-gradient-to-r from-gradient-start to-gradient-end 
+                    className='mt-5 px-4 py-3 rounded-md font-bold text-white bg-gradient-to-r from-gradient-start to-gradient-end 
                                md:mt-10 md:px-6 md:py-3'
                 >Show All Jobs</button>
             }

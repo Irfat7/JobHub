@@ -25,7 +25,7 @@ const JobCategory = () => {
                         md:mt-32'>
             <p
                 className='mb-4 text-3xl font-bold
-                md:text-5xl md:mb-8'
+                md:mb-8'
             >Job Category List</p>
             <p
                 className='mb-5 text-gray-600 text-sm leading-normal
