@@ -1,14 +1,16 @@
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { AllJobsContext } from '../Header/Header';
+import { AllJobsContext, AppliedJobsContext } from '../Header/Header';
 
 const JobDetails = () => {
+    document.title="Job Details"
     const jobId = useLoaderData()
     const allJobs = useContext(AllJobsContext)
+    const {appliedJobs, applyJobHandler} = useContext(AppliedJobsContext)
 
     const selectedJob = allJobs.find(job => job.id === jobId)
     const { id, jobTitle, jobDescription, jobResponsibilities, educationalRequirements, experienceRequirement, contactInformation, cityLocation, countryName, salaryRange } = selectedJob
-
+    
     return (
         <div>
             <p
@@ -62,7 +64,9 @@ const JobDetails = () => {
                         </div>
                     </div>
 
-                    <button className='w-full text-white text-lg rounded-md py-2 bg-gradient-to-r from-gradient-start to-gradient-end'>
+                    <button
+                        onClick={()=>applyJobHandler(selectedJob)}
+                        className='w-full text-white text-lg rounded-md py-2 bg-gradient-to-r from-gradient-start to-gradient-end'>
                         Apply Now
                     </button>
 

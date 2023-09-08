@@ -4,6 +4,7 @@ import JobCategory from '../../JobCategory/JobCategory';
 import FeaturedJobs from '../../FeatuedJobs/FeaturedJobs';
 
 const Home = () => {
+    document.title="Home"
     return (
         <div className='md:px-4 '>
             <Hero />
