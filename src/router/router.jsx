@@ -6,6 +6,7 @@ import JobDetails from "../components/JobDetails/JobDetails"
 import AppliedJobs from "../components/AppliedJobs/AppliedJobs"
 import { getLocalStorage } from "../Utility/LocalStorageManager"
 import ErrorPage from "../components/ErrorPage/ErrorPage"
+import Marks from "../components/Marks/Marks"
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home />,
+            },
+            {
+                path: '/statistics',
+                element: <Marks/>
             },
             {
                 path: '/applied-jobs',

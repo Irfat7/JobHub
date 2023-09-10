@@ -14,6 +14,7 @@
 body {
   overflow-x: hidden;
 }
+
 body::before {
   content: "";
   position: absolute;
@@ -31,3 +32,16 @@ body::before {
   margin-left: auto;
   margin-right: auto;
 }
+
+
+/* footer
+
+Create a blog page and answer the following questions:
+a. When should you use context API?
+b. What is a custom hook?
+c. What is useRef?
+d. What is useMemo?
+
+Create a statistics page. It cannot be a simple line/bar chart. The chart will be
+based on the assignment marks (all the marks you got so far) against the
+assignment number. Don’t forget to give tooltips */

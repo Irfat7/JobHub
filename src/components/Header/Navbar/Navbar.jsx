@@ -30,7 +30,7 @@ const Navbar = () => {
                             md:static md:bg-transparent md:duration-0 md:translate-y-0 md:px-0 md:py-0 md:shadow-none md:flex gap-12`}
             >
                 <ActiveLink to='/'>Home</ActiveLink>
-                <ActiveLink to='/statistic'>Statistics</ActiveLink>
+                <ActiveLink to='/statistics'>Statistics</ActiveLink>
                 <ActiveLink to='/applied-jobs'>Applied Jobs</ActiveLink>
                 <ActiveLink to='/blog'>Blog</ActiveLink>
             </div>
