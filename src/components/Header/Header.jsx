@@ -4,6 +4,7 @@ import { Outlet, useLoaderData } from 'react-router-dom';
 import ScrollTop from '../../Utility/ScrollTop';
 import toast, { Toaster } from 'react-hot-toast';
 import { addToLocalStorage, getLocalStorage } from '../../Utility/LocalStorageManager';
+import Footer from '../Footer/Footer';
 
 export const AllJobsContext = createContext()
 export const AppliedJobsContext = createContext()
@@ -38,17 +39,20 @@ const Header = () => {
 
 
     return (
-        <div className='common-width'>
-            <ScrollTop />
-            <Navbar />
-            <div className='common-width px-4 my-5'>
-                <AllJobsContext.Provider value={allJobs}>
-                    <AppliedJobsContext.Provider value={{ appliedJobs, applyJobHandler }}>
-                        <Outlet />
-                    </AppliedJobsContext.Provider>
-                </AllJobsContext.Provider>
+        <div>
+            <div className='common-width'>
+                <ScrollTop />
+                <Navbar />
+                <div className='common-width px-4 my-5'>
+                    <AllJobsContext.Provider value={allJobs}>
+                        <AppliedJobsContext.Provider value={{ appliedJobs, applyJobHandler }}>
+                            <Outlet />
+                        </AppliedJobsContext.Provider>
+                    </AllJobsContext.Provider>
+                </div>
+                <Toaster />
             </div>
-            <Toaster />
+            <Footer/>
         </div>
     );
 };
