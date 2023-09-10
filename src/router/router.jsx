@@ -7,6 +7,7 @@ import AppliedJobs from "../components/AppliedJobs/AppliedJobs"
 import { getLocalStorage } from "../Utility/LocalStorageManager"
 import ErrorPage from "../components/ErrorPage/ErrorPage"
 import Marks from "../components/Marks/Marks"
+import Blogs from "../components/Blogs/Blogs"
 
 const router = createBrowserRouter([
     {
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/blog',
-                element: <p>blog</p>
+                element: <Blogs/>
             },
             {
                 path: '/details/:jobId',
