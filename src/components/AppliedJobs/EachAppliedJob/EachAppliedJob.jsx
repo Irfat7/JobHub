@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { MapPinIcon,CurrencyDollarIcon } from '@heroicons/react/24/solid'
 
 const EachAppliedJob = ({ appliedJob }) => {
     const { id, companyLogoImgUrl, jobTitle, companyName, isRemote,
@@ -39,12 +40,10 @@ const EachAppliedJob = ({ appliedJob }) => {
                                   md:flex-row md:gap-4'
                     >
                         <p>
-                            <span>$</span>
-                            {cityLocation}, {countryName}
+                            <span><MapPinIcon className='mb-1 inline h-5 w-5' /> {cityLocation}, {countryName} </span>
                         </p>
                         <p>
-                            <span>$</span>
-                            Salary : {salaryRange}
+                            <CurrencyDollarIcon className='mb-1 inline h-5 w-5' /> Salary : {salaryRange}
                         </p>
                     </div>
                 </div>

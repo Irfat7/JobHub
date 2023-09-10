@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { AppliedJobsContext } from '../Header/Header';
 import EachAppliedJob from './EachAppliedJob/EachAppliedJob';
 
@@ -6,6 +6,23 @@ const AppliedJobs = () => {
     document.title = 'Applied Jobs'
 
     const { appliedJobs } = useContext(AppliedJobsContext)
+    const [appliedJobsToShow, setAppliedJobsToShow] = useState(appliedJobs)
+
+    const filterChangeHandler = (e) =>{
+        const value = e.target.value
+        if(value==='Remote'){
+            const filtered = appliedJobsToShow.filter(job=> job.isRemote===true)
+            setAppliedJobsToShow(filtered)
+        }
+        else if(value==='Full Time'){
+            const filtered = appliedJobsToShow.filter(job=> job.isFullTime===true)
+            setAppliedJobsToShow(filtered)
+        }
+        else if(value==='Date'){
+            setAppliedJobsToShow(appliedJobs)
+        }
+    }
+
     return (
         <div>
             <p
@@ -14,24 +31,22 @@ const AppliedJobs = () => {
             >Applied Jobs</p>
 
             <div>
-                {
-                    appliedJobs.length &&
-                    <div className='w-full mb-4 rounded-md flex justify-end'>
-                        <div>
-                            <select onChange={()=>console.log('changed')} id="countries" className="px-4 py-2 border focus:outline-gradient-end border-gray-300 rounded-lg">
-                                <option disabled selected>Filter By</option>
-                                <option>Remote</option>
-                                <option>Part Time</option>
-                                <option>Date</option>
-                            </select>
-                        </div>
+                <div className='w-full mb-4 rounded-md flex justify-end'>
+                    <div>
+                        <select onChange={(e) => filterChangeHandler(e)} id="countries" className="px-4 py-2 border focus:outline-gradient-end border-gray-300 rounded-lg">
+                            <option disabled selected>Filter By</option>
+                            <option>Remote</option>
+                            <option>Full Time</option>
+                            <option>Date</option>
+                        </select>
                     </div>
-
-                }
+                </div>
                 {
-                    appliedJobs.length
-                        ? appliedJobs.map((appliedJob, index) => <EachAppliedJob key={index} appliedJob={appliedJob} />)
-                        : <h1>NO JOBS</h1>
+                    appliedJobsToShow.length
+                        ? appliedJobsToShow.map((appliedJob, index) => <EachAppliedJob key={index} appliedJob={appliedJob} />)
+                        : <h1
+                            className='font-bold text-2xl text-center p-10'
+                        >NO JOBS Found</h1>
                 }
             </div>
 

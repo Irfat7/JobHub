@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AllJobsContext, AppliedJobsContext } from '../Header/Header';
+import { CurrencyDollarIcon,CalendarDaysIcon, PhoneIcon, EnvelopeIcon, MapPinIcon,  } from '@heroicons/react/24/solid'
 
 const JobDetails = () => {
     document.title="Job Details"
@@ -47,19 +48,19 @@ const JobDetails = () => {
                         className='bg-indigo-100 rounded-md p-7 mb-6 md:p-7 md:mb-6'
                     >
                         <p className='pb-6 mb-6 font-bold border-gray-300 border-b-2'>Job Details</p>
-                        <p className='font-semibold mb-4'>Salary : <span className='text-gray-600 font-normal'>{salaryRange} (Per Month)</span></p>
-                        <p className='font-semibold mb-8 '>Job Title : <span className='text-gray-600 font-normal'>{jobTitle}</span></p>
+                        <p className='font-semibold mb-4'><CurrencyDollarIcon className='inline fill-gradient-start mb-1 w-5 h-5' /> Salary : <span className='text-gray-600 font-normal'>{salaryRange} (Per Month)</span></p>
+                        <p className='font-semibold mb-8 '><CalendarDaysIcon className='inline fill-gradient-start mb-1 w-5 h-5' /> Job Title : <span className='text-gray-600 font-normal'>{jobTitle}</span></p>
                         <p className='font-bold pb-6 mb-6 border-gray-300 border-b-2'>Contact Information</p>
                         <div className='mb-4'>
-                            <span className='font-bold'>Phone : </span>
+                            <span className='font-bold'><PhoneIcon className='inline fill-gradient-start mb-1 w-5 h-5' /> Phone : </span>
                             <span className='text-gray-600'>{contactInformation?.phone}</span>
                         </div>
                         <div className='mb-4'>
-                            <span className='font-bold'>Email : </span>
+                            <span className='font-bold'><EnvelopeIcon className='inline fill-gradient-start mb-1 w-5 h-5' /> Email : </span>
                             <span className='text-gray-600'>{contactInformation?.email}</span>
                         </div>
                         <div className='mb-4'>
-                            <span className='font-bold'>Address : </span>
+                            <span className='font-bold'><MapPinIcon className='inline fill-gradient-start mb-1 w-5 h-5' /> Address : </span>
                             <span className='text-gray-600'>{contactInformation?.address}</span>
                         </div>
                     </div>
