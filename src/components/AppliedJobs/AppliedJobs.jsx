@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { AppliedJobsContext } from '../Header/Header';
 import EachAppliedJob from './EachAppliedJob/EachAppliedJob';
 
@@ -6,16 +6,21 @@ const AppliedJobs = () => {
     document.title = 'Applied Jobs'
 
     const { appliedJobs } = useContext(AppliedJobsContext)
+
     const [appliedJobsToShow, setAppliedJobsToShow] = useState(appliedJobs)
+
+    useEffect(()=>{
+        setAppliedJobsToShow(appliedJobs)
+    },[appliedJobs])
 
     const filterChangeHandler = (e) =>{
         const value = e.target.value
         if(value==='Remote'){
-            const filtered = appliedJobsToShow.filter(job=> job.isRemote===true)
+            const filtered = appliedJobs.filter(job=> job.isRemote===true)
             setAppliedJobsToShow(filtered)
         }
         else if(value==='Full Time'){
-            const filtered = appliedJobsToShow.filter(job=> job.isFullTime===true)
+            const filtered = appliedJobs.filter(job=> job.isFullTime===true)
             setAppliedJobsToShow(filtered)
         }
         else if(value==='Date'){

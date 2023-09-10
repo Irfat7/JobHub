@@ -70,7 +70,7 @@ const Footer = () => {
                 <hr className='w-full h-px my-8 bg-gray-200 border-0 dark:bg-gray-700'/>
 
                 <div className='w-full flex items-center gap-2 flex-col sm:flex-row text-xs text-gray-500 md:justify-between'>
-                    <p>@2023 CareerHub. All Rights Reserved</p>
+                    <p>@2023 JobHub. All Rights Reserved</p>
                     <p>Powered by JobHub</p>
                 </div>
             </div>
