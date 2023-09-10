@@ -1,4 +1,5 @@
 import React from 'react';
+import coverPic from '../../assets/hero-person.png'
 
 const Hero = () => {
     return (
@@ -30,7 +31,7 @@ const Hero = () => {
             </div>
             <img
                 className='w-3/4 md:w-1/3'
-                src='/src/assets/hero-person.png' alt="" />
+                src={coverPic} alt="" />
         </div>
     );
 };
