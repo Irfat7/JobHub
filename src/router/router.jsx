@@ -3,6 +3,8 @@ import Header from "../components/Header/Header"
 import Home from "../components/Layout/Home/Home"
 import getAllJobs from "../tools/getJobTool"
 import JobDetails from "../components/JobDetails/JobDetails"
+import AppliedJobs from "../components/AppliedJobs/AppliedJobs"
+import { getLocalStorage } from "../Utility/LocalStorageManager"
 
 const router = createBrowserRouter([
     {
@@ -13,6 +15,10 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home/>,
+            },
+            {
+                path: '/applied-jobs',
+                element: <AppliedJobs/>,
             },
             {
                 path: '/blog',

@@ -2,15 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const JobCard = ({ job }) => {
-    const { id,companyLogoImgUrl, jobTitle, companyName, isRemote, isFullTime, cityLocation, countryName, salaryRange } = job
+    const { id, companyLogoImgUrl, jobTitle, companyName, isRemote, isFullTime, cityLocation, countryName, salaryRange } = job
     return (
         <div
             className='border border-gray-300 rounded-md p-10 text-left text-base
                        '
         >
-            <img className='h-8 mb-5
-                            md:h-10 md:mb-8'
-                src={companyLogoImgUrl} alt="" />
+            <img
+                className='h-8 mb-5
+                           md:h-10 md:mb-8'
+                src={companyLogoImgUrl}
+            />
             <div className='flex flex-col gap-3'>
                 <p
                     className=' text-xl font-bold
