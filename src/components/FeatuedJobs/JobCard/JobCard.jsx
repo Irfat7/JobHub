@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPinIcon,CurrencyDollarIcon } from '@heroicons/react/24/solid'
+import { MapPinIcon, CurrencyDollarIcon } from '@heroicons/react/24/solid'
 
 const JobCard = ({ job }) => {
     const { id, companyLogoImgUrl, jobTitle, companyName, isRemote, isFullTime, cityLocation, countryName, salaryRange } = job
@@ -41,17 +41,17 @@ const JobCard = ({ job }) => {
                         <span><MapPinIcon className='mb-1 inline h-5 w-5' /> {cityLocation}, {countryName} </span>
                     </p>
                     <p>
-                        <CurrencyDollarIcon className='mb-1 inline h-5 w-5'/> Salary : {salaryRange}
+                        <CurrencyDollarIcon className='mb-1 inline h-5 w-5' /> Salary : {salaryRange}
                     </p>
                 </div>
             </div>
 
 
-            <Link to={`/details/${id}`}>
-                <button
-                    className='py-2 px-3 text-white rounded-md bg-gradient-to-r from-gradient-start to-gradient-end
-                      md:py-2 md:px-4'
-                >View Details</button>
+            <Link
+                className='py-2 px-3 text-white rounded-md bg-gradient-to-r from-gradient-start to-gradient-end
+                           md:py-2 md:px-4'
+                to={`/details/${id}`}>
+                View Details
             </Link>
         </div>
     );

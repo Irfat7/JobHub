@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AllJobsContext, AppliedJobsContext } from '../Header/Header';
 import { CurrencyDollarIcon,CalendarDaysIcon, PhoneIcon, EnvelopeIcon, MapPinIcon,  } from '@heroicons/react/24/solid'
+import ErrorPage from '../ErrorPage/ErrorPage';
 
 const JobDetails = () => {
     document.title="Job Details"
@@ -10,6 +11,11 @@ const JobDetails = () => {
     const {appliedJobs, applyJobHandler} = useContext(AppliedJobsContext)
 
     const selectedJob = allJobs.find(job => job.id === jobId)
+
+    if(!selectedJob){
+        return <ErrorPage/>
+    }
+
     const { id, jobTitle, jobDescription, jobResponsibilities, educationalRequirements, experienceRequirement, contactInformation, cityLocation, countryName, salaryRange } = selectedJob
     
     return (

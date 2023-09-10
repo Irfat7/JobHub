@@ -5,6 +5,7 @@ import getAllJobs from "../tools/getJobTool"
 import JobDetails from "../components/JobDetails/JobDetails"
 import AppliedJobs from "../components/AppliedJobs/AppliedJobs"
 import { getLocalStorage } from "../Utility/LocalStorageManager"
+import ErrorPage from "../components/ErrorPage/ErrorPage"
 
 const router = createBrowserRouter([
     {
@@ -14,11 +15,11 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home/>,
+                element: <Home />,
             },
             {
                 path: '/applied-jobs',
-                element: <AppliedJobs/>,
+                element: <AppliedJobs />,
             },
             {
                 path: '/blog',
@@ -26,11 +27,15 @@ const router = createBrowserRouter([
             },
             {
                 path: '/details/:jobId',
-                element: <JobDetails/>,
-                loader: ({params})=>params.jobId
+                element: <JobDetails />,
+                loader: ({ params }) => params.jobId
+            },
+            {
+                path: '*',
+                element: <ErrorPage />
             }
         ]
-    }
+    },
 ])
 
 export default router
